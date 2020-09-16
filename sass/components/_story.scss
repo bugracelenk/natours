@@ -1,0 +1,63 @@
+[class^="story-"] {
+  font-size: $default-font-size;
+}
+
+.story {
+  &-wrapper {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    background-color: rgba($color-white, 0.6);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    transform: skewX(-12deg);
+
+    &:hover .story-shape-caption {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover .story-shape-image {
+      transform: translateX(-4rem) scale(1);
+      filter: blur(0.3rem);
+      -webkit-filter: blur(0.3rem);
+    }
+  }
+
+  &-shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%); // onlu works when element has dimensions and has float property
+    background-color: orange;
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+
+    &-image {
+      height: 100%;
+      transform: translateX(-4rem) scale(1.4);
+      backface-visibility: hidden;
+      transition: all 0.5s;
+    }
+
+    &-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      color: $color-white;
+      opacity: 0;
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      text-align: center;
+      transition: all 0.5s;
+      backface-visibility: hidden;
+    }
+  }
+
+  &-text {
+    transform: skewX(12deg);
+  }
+}

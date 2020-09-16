@@ -1,0 +1,32 @@
+.u {
+  &-center {
+    &-text {
+      text-align: center;
+    }
+  }
+}
+
+.m {
+  &-t {
+    &-s {
+      margin-top: 1.5rem;
+    }
+    &-m {
+      margin-top: 4rem;
+    }
+    &-l {
+      margin-top: 8rem;
+    }
+  }
+  &-b {
+    &-s {
+      margin-bottom: 1.5rem;
+    }
+    &-m {
+      margin-bottom: 4rem;
+    }
+    &-l {
+      margin-bottom: 8rem;
+    }
+  }
+}
