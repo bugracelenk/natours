@@ -1,0 +1,55 @@
+.popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparentize($color-black, $amount: 0.1);
+  z-index: 99999;
+  &-card {
+    @include centerHorizontalVertical;
+    background-color: $color-white;
+    width: 75%;
+    box-shadow: 0 2rem 4rem rgba($color-black, $alpha: 0.2);
+    border-radius: 3px;
+    display: table;
+    &-left {
+      width: 33.3%;
+      display: table-cell;
+    }
+
+    &-right {
+      width: 66.6%;
+      display: table-cell;
+    }
+
+    &-content {
+      padding: 5rem 0;
+    }
+
+    &-text {
+      font-size: 1.3rem;
+      max-width: 85%;
+
+      column-count: 2;
+      column-count: 2;
+      column-rule: 1px solid $color-grey-light-2;
+
+      -moz-column-count: 2;
+      -moz-column-count: 2;
+      -moz-column-rule: 1px solid $color-grey-light-2;
+
+      margin-top: 2rem;
+
+      hyphens: auto;
+
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
+    &-image {
+      display: block;
+      width: 100%;
+    }
+  }
+}
